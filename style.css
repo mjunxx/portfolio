@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: radial-gradient(circle at center, #100020, #000010);
+  overflow-x: hidden;
+}
+
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #d5aaff;
+  text-shadow: 0 0 15px #b366ff, 0 0 40px #7a00cc;
+}
+
+nav {
+  margin: 20px 0;
+}
+
+nav a {
+  background: rgba(80, 0, 130, 0.6);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #b300ff;
+}
+
+nav a:hover,
+nav a.active {
+  background: #ff33cc;
+  box-shadow: 0 0 20px #ff66ff;
+}
+
+.page-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-section h2 {
+  font-size: 2em;
+  color: #ffb6ff;
+  text-shadow: 0 0 15px #ff66cc;
+  margin-bottom: 15px;
+}
+
+.page-section p,
+.page-section ul {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #ddd;
+  list-style: none;
+}
+
+button {
+  background: linear-gradient(135deg, #ff33cc, #9900ff);
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 20px #ff66ff;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #ff99ff;
+}
+
+footer {
+  text-align: center;
+  color: #aaa;
+  padding: 30px 0;
+  font-size: 0.9em;
+}
+
+.profile-picture {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.profile-picture img {
+  width: 220px;          /* bigger width */
+  height: 320px;         /* taller for vertical shape */
+  border-radius: 15px;   /* slightly rounded corners */
+  object-fit: cover;     /* ensures image fills the area nicely */
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Make the background cover the whole page */
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* keeps it behind everything */
+  background: black;
+}

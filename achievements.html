@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achievements | Edmar Almuete</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Slide system */
+    .slide {
+      display: none;
+      animation: fade 0.4s ease;
+    }
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Centered buttons */
+    .slide-controls {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .slide-controls button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #8b4bff;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .slide-controls button:hover {
+      background: #6d33d7;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg"></canvas>
+
+  <div class="container">
+    <header>
+      <h1>My Achievements</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="achievements.html" class="active">Achievements</a>
+        <a href="Documentations.html" class="active">Documentations</a>
+      </nav>
+    </header>
+
+    <section id="achievement-slides">
+
+      <!-- SLIDE 1 - EDUCATIONAL -->
+      <div class="slide active">
+        <h2>🎓 Educational Attainment</h2>
+        <p>Nursery Graduate – 2011</p>
+        <p>Kinder Garten Graduate – 2012</p>
+        <p>Elementary Graduate – 2018</p>
+        <p>Junior High School Graduate – 2023</p>
+        <p>Senior High School Graduate – 2025</p>
+        <p>First Year College Student – 2025</p>
+      </div>
+
+      <!-- SLIDE 2 - ACADEMICS -->
+      <div class="slide">
+        <h2>📘 Academics & Mathematics</h2>
+        <p>Elementary Salutatorian (2012–2015)</p>
+        <p>MTAP Silver Medalist – District, 2012</p>
+        <p>MTAP Gold Medalist – District, 2013</p>
+        <p>MTAP Gold Medalist – Cluster, 2013</p>
+        <p>MTAP Bronze Medalist – Provincial, 2013</p>
+        <p>MTAP Gold Medalist – District, 2014</p>
+        <p>MTAP Gold Medalist – Cluster, 2014</p>
+        <p>With Honors – Elementary & JHS</p>
+        <p>With High Honors – SHS (2023–2025)</p>
+        <p>Most Outstanding in All Sports – 2025</p>
+      </div>
+
+      <!-- SLIDE 3 - TAEKWONDO -->
+      <div class="slide">
+        <h2>🏅 Taekwondo Awards</h2>
+        <p>Silver – Robinsons Calasiao (2013)</p>
+        <p>Silver – Pozorrubio (2013)</p>
+        <p>Bronze – Combative (2013)</p>
+        <p>Gold – Laoag (2014)</p>
+        <p>Bronze – Combative (2014)</p>
+        <p>Bronze – Trio Poomsae (2014)</p>
+        <p>Silver – Poomsae (2014)</p>
+        <p>Gold – Combative (2014)</p>
+        <p>Bronze – Vigan (2015)</p>
+        <p>Gold – Vigan Poomsae & Trio (2015)</p>
+      </div>
+
+      <!-- SLIDE 4 - SPOKEN WORD -->
+      <div class="slide">
+        <h2>🎤 Spoken Word Poetry / Sabayang Pagbigkas</h2>
+        <p>Gold – District (2014)</p>
+        <p>Gold – Cluster (2014)</p>
+        <p>Silver – Provincial (2014)</p>
+        <p>Gold – District/Cluster/Provincial (2015)</p>
+        <p>Bronze – Region 1 (2016)</p>
+      </div>
+
+      <!-- SLIDE 5 - CHORALE -->
+      <div class="slide">
+        <h2>🎶 Chorale Competitions</h2>
+        <p>Silver – School (2022)</p>
+        <p>Champion – Barangay (2023 & 2024)</p>
+        <p>3rd Place – National Students Competition (2023)</p>
+      </div>
+
+      <!-- SLIDE 6 - BADMINTON -->
+      <div class="slide">
+        <h2>🏸 Badminton Achievements</h2>
+        <p>District Champion – 2015, 2016, 2017, 2022</p>
+        <p>Provincial Bronze – 2016</p>
+        <p>Provincial Silver – 2018, 2023</p>
+        <p>Pugo Mayor’s Cup – Multiple Medals (2023–2024)</p>
+      </div>
+
+      <!-- SLIDE 7 - VOLLEYBALL -->
+      <div class="slide">
+        <h2>🏐 Volleyball Achievements</h2>
+        <p>APPS Champion – 2025</p>
+        <p>Provincial Champion – 2025</p>
+        <p>Provincial Silver – 2025</p>
+        <p>Barangay Champion – 2023 & 2024</p>
+      </div>
+
+      <!-- SLIDE 8 - BASKETBALL -->
+      <div class="slide">
+        <h2>🏀 Basketball Achievements</h2>
+        <p>U18 Mayor’s Cup – Bronze (2023)</p>
+        <p>Open Age Mayor’s Cup – Silver (2023)</p>
+        <p>U18 Mayor’s Cup – Champion (2024)</p>
+        <p>U24 Mayor’s Cup – Champion (2024)</p>
+      </div>
+
+      <!-- SLIDE 9 - OTHER AWARDS -->
+      <div class="slide">
+        <h2>🏫 Other Awards</h2>
+        <p>Best in Immersion (IT)</p>
+        <p>Most Obedient</p>
+        <p>Boy Scout of the Year</p>
+        <p>Conduct Awardee (2022–2023)</p>
+        <p>Athlete of the Year (2015–2018, 2019, 2022)</p>
+      </div>
+
+      <!-- Slide Controls -->
+      <div class="slide-controls">
+        <button id="prevBtn">← Previous</button>
+        <button id="nextBtn">Next →</button>
+      </div>
+
+      </section>
+
+      <br><br>
+
+      <!-- Next and Previous button below Achievement section -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">← Previous</button>
+      <button onclick="window.location.href='documentation.html'">Next →</button>
+    </div>
+
+
+    </section>
+
+    <footer>© 2025 Edmar Almuete | All rights reserved</footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="background.js"></script>
+
+  <script>
+    // SLIDE SYSTEM SCRIPT
+    const slides = document.querySelectorAll(".slide");
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((s, i) => s.classList.toggle("active", i === index));
+    }
+
+    document.getElementById("nextBtn").onclick = () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    };
+
+    document.getElementById("prevBtn").onclick = () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    };
+  </script>
+
+</body>
+</html>

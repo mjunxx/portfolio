@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Edmar Almuete</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Picture + About layout */
+    .profile-about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 60px;
+    }
+
+    .profile-picture img {
+      width: 220px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-picture img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-section {
+      max-width: 600px;
+      color: #fff;
+      text-align: left;
+    }
+
+    .about-section h2 {
+      color: #ff99ff;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+    }
+
+    .about-section p {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    /* Next button styling */
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .nav-buttons button {
+      background-color: #b366ff;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #9b4dff;
+      transform: scale(1.05);
+    }
+
+    /* Responsive view */
+    @media (max-width: 768px) {
+      .profile-about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-section {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <div class="container">
+    <header>
+      <h1>Welcome to My Portfolio</h1>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="Documentations.html" class="active">Documentations</a>
+      </nav>
+    </header>
+
+    <!-- Picture + About beside each other -->
+    <section class="profile-about" id="about">
+      <div class="profile-picture">
+        <img src="ed.png" alt="Photo of Edmar Almuete">
+      </div>
+      <div class="about-section">
+       <h2>About Me</h2>
+        <p>
+          Hello! I'm <strong>Edmar Almuete</strong>, an aspiring Information Technology professional who loves exploring the ever-changing world of technology. 
+          I’m currently pursuing my IT studies with a strong focus on <strong>Enterprise Resource Planning (ERP)</strong> a field that connects technology and business processes to help organizations run efficiently.
+        </p>
+        <p>
+          My passion for IT started with a curiosity about how systems and software work behind the scenes. 
+          Over time, that curiosity turned into a deep desire to learn, build, and innovate. 
+          I enjoy solving problems, creating organized solutions, and using technology to make people’s lives easier and more productive.
+        </p>
+        <p>
+          I believe that technology is more than just code it’s a bridge that connects creativity, logic, and real-world impact. 
+          I strive to grow not only as a developer but also as a team player and problem solver, constantly seeking new opportunities to improve my technical skills and expand my understanding of digital systems.
+        </p>
+        <p>
+          Outside of academics, I value discipline, adaptability, and continuous learning. 
+          I’m driven by the idea that every challenge is a chance to grow, and every project is an opportunity to leave a meaningful mark. 
+          My goal is to build a career that blends innovation, collaboration, and purpose. One that inspires others to pursue excellence in the field of technology.
+        </p>
+      </div>
+    </section>
+
+    <!-- Next button below About section -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='achievements.html'">Next →</button>
+    </div>
+
+    <footer>© 2025 Edmar Almuete | All rights reserved</footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="background.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
