@@ -6,14 +6,55 @@
   <title>Home | Edmar Almuete</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Picture + About layout */
+    /* Disable scrolling and full height */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      overflow: hidden; /* Prevent scroll */
+    }
+
+    /* Container layout */
+    .container {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Start from top */
+      align-items: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    header {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ff99ff;
+    }
+
+    /* Profile + About */
     .profile-about {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       gap: 40px;
       flex-wrap: wrap;
-      margin-top: 60px;
+      max-width: 1200px;
+      width: 100%;
+      margin-bottom: 30px; /* space before Next button */
     }
 
     .profile-picture img {
@@ -44,13 +85,12 @@
     .about-section p {
       line-height: 1.6;
       font-size: 1rem;
+      margin-bottom: 0;
     }
 
-    /* Next button styling */
+    /* Next button slightly higher */
     .nav-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
+      margin-bottom: 20px; /* Push up from bottom */
     }
 
     .nav-buttons button {
@@ -69,13 +109,19 @@
       transform: scale(1.05);
     }
 
-    /* Responsive view */
+    footer {
+      text-align: center;
+      color: #aaa;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
       .profile-about {
         flex-direction: column;
         text-align: center;
+        align-items: center;
       }
-
       .about-section {
         text-align: center;
       }
@@ -91,39 +137,22 @@
       <nav>
         <a href="index.html" class="active">Home</a>
         <a href="achievements.html">Achievements</a>
-        <a href="Documentations.html" class="active">Documentations</a>
+        <a href="documentations.html" class="active">Documentations</a>
       </nav>
     </header>
 
-    <!-- Picture + About beside each other -->
+    <!-- Profile + About -->
     <section class="profile-about" id="about">
       <div class="profile-picture">
         <img src="ed.png" alt="Photo of Edmar Almuete">
       </div>
       <div class="about-section">
-       <h2>About Me</h2>
-        <p>
-          Hello! I'm <strong>Edmar Almuete</strong>, an aspiring Information Technology professional who loves exploring the ever-changing world of technology. 
-          I’m currently pursuing my IT studies with a strong focus on <strong>Enterprise Resource Planning (ERP)</strong> a field that connects technology and business processes to help organizations run efficiently.
-        </p>
-        <p>
-          My passion for IT started with a curiosity about how systems and software work behind the scenes. 
-          Over time, that curiosity turned into a deep desire to learn, build, and innovate. 
-          I enjoy solving problems, creating organized solutions, and using technology to make people’s lives easier and more productive.
-        </p>
-        <p>
-          I believe that technology is more than just code it’s a bridge that connects creativity, logic, and real-world impact. 
-          I strive to grow not only as a developer but also as a team player and problem solver, constantly seeking new opportunities to improve my technical skills and expand my understanding of digital systems.
-        </p>
-        <p>
-          Outside of academics, I value discipline, adaptability, and continuous learning. 
-          I’m driven by the idea that every challenge is a chance to grow, and every project is an opportunity to leave a meaningful mark. 
-          My goal is to build a career that blends innovation, collaboration, and purpose. One that inspires others to pursue excellence in the field of technology.
-        </p>
+        <h2>About Me</h2>
+        <p>Hello! I'm <strong>Edmar Almuete</strong>, an aspiring Information Technology professional who loves exploring the ever changing world of technology. I’m currently pursuing my IT studies with a strong focus on <strong>Enterprise Resource Planning (ERP)</strong>, a field that connects technology and business processes to help organizations run efficiently. My passion for IT started with a curiosity about how systems and software work behind the scenes, which grew into a deep desire to learn, build, and innovate. I enjoy solving problems, creating organized solutions, and using technology to make people’s lives easier and more productive. I believe that technology is more than just code. It’s a bridge that connects creativity, logic, and real-world impact. I strive to grow not only as a developer but also as a team player and problem solver, constantly seeking new opportunities to improve my technical skills and expand my understanding of digital systems. Outside of academics, I value discipline, adaptability, and continuous learning. I’m driven by the idea that every challenge is a chance to grow, and every project is an opportunity to leave a meaningful mark. My goal is to build a career that blends innovation, collaboration, and purpose, one that inspires others to pursue excellence in the field of technology.</p>
       </div>
     </section>
 
-    <!-- Next button below About section -->
+    <!-- Next button -->
     <div class="nav-buttons">
       <button onclick="window.location.href='achievements.html'">Next →</button>
     </div>
